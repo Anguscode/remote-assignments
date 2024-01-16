@@ -1,0 +1,214 @@
+/* 正常網頁版 Layout when screen width >= 1200px */
+
+*{
+box-sizing:border-box;
+}
+
+.wrapper{
+height: 100%;
+}
+
+.main-header{
+display: flex;
+width: 100%;
+background-color: #EEEEEE;
+}
+
+.title-logo{
+padding: 10px 30px;
+font-family: 'Times New Roman', Times, serif;
+font-size: 14px;
+}
+
+nav{
+display: flex;
+padding: 10px 15px;
+position: absolute;
+top: 1px;
+right: 5px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+a{
+text-decoration: none;
+color: rgb(0, 0, 0);
+}
+
+a:hover{
+color: rgb(153, 135, 246);
+}
+
+li{
+padding: 0 20px;
+font-size: 14px;
+}
+
+.hamburger-menu{
+display: none;
+}
+
+.main-nav{
+display: flex;
+list-style-type: none;
+}
+
+.message{
+width: 100%;
+height: 20vh;
+flex:1;
+background-color: #CDE;
+}
+
+h2.welcome{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+font-family: 'Times New Roman', Times, serif;
+}
+
+h2.title{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin:20px 0;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+width: 100%;
+height: 100%;
+display: flex;
+padding: 20px;
+flex-wrap: wrap;
+justify-content: center; 
+}
+
+.item{
+width: calc(40% - 10px); 
+height: 150px;
+display: flex;
+justify-content: center;
+box-sizing: border-box; 
+flex-wrap: wrap;
+flex-basis: auto;
+margin-bottom: 12px;
+margin-left: 12px;
+padding-top: 12px;
+font-family: 'Times New Roman', Times, serif;
+background-color: #89A;
+}
+
+.cta-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.cta-button{
+display: flex;
+align-items: center;
+margin: auto;
+padding: 3vh 4vh;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+background-color:#DAEBFC; 
+}
+
+
+/* Layout when screen width >= 500px and < 800px */
+
+@media screen and (min-width:500px) and (max-width:800px)  {
+        .main-nav{
+        display: none;
+        }
+        
+        .hamburger-container{
+            position: absolute;
+            top: 20px; 
+            right: 60px; 
+            z-index: 1000;
+        }
+        .hamburger-menu {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .line {
+            width: 100%;
+            height: 3px;
+            background-color: #6c6c6c; 
+        }
+
+        .message {
+            height: 30vh;
+        }
+
+}
+
+
+/* Layout when screen width < 500px */
+
+@media screen and (max-width:500px)  {
+    .main-nav{
+        display: none;
+        }
+    
+        .hamburger-container{
+            position: absolute;
+            top: 20px; 
+            right: 60px; 
+            z-index: 1000;
+        }
+        .hamburger-menu {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+          
+          .line {
+            width: 100%;
+            height: 3px;
+            background-color: #6c6c6c; 
+        }
+
+          .message {
+            height: 30vh;
+        }
+
+          .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            padding: 20px;
+        }
+            
+            .item{
+            width: 100%; 
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-sizing: border-box; 
+            flex-basis: auto;
+            margin-bottom: 16px;
+            margin-left: 12px;
+            padding-top: 12px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #89A;
+        }
+}
