@@ -9,54 +9,74 @@
 </head>
 <body>
     <div class="wrapper">
-            <!-- 以下是頁首區塊 -->
+
+        <!-- 以下是頁首區塊 -->
         <header class="main-header">
 
-                <!-- 以下左側 Logo 區塊 -->
-                <h3 class="title-logo">Website Title / Logo</h1>
+            <!-- 以下左側 Logo 區塊 -->
+            <h3 class="title-logo">Website Title / Logo</h1>
                 
-                <!-- 以下漢堡選單區塊 -->  
-                <div class="hamburger-container">
-                    <div class="hamburger-menu">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+            <!-- 以下漢堡選單區塊 -->  
+            <div class="hamburger-container">
+                <div class="hamburger-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
+            </div>
 
-                <!-- 以下右側目錄區塊 -->
-                <nav>
-                    <ul class="main-nav">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a></li>
-                        <li><a href="#">Item 3</a></li>
-                        <li><a href="#">Item 4</a></li>
-                    </ul>
-                    
-                </nav>
-
+            <!-- 以下是手機版右側目錄區塊 -->
+            <nav class="hamburger-menu-container">
+                <div class="x-button"> X </div>
+                <ul class="menu-list">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                </ul>
+                        
+            </nav>
+                
+            <!-- 以下是桌機版右側目錄區塊 -->
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                </ul>  
+            </nav>
         </header>
 
         <!-- 以下是 Welcome Message 區塊 -->
         <section class="message">
-                <h2 class="welcome"> Welcome Message </h2>
+            <h2 class="welcome"> Welcome Message </h2>
         </section>
 
 
-            <!-- 以下是 Section Title 區塊 -->
-            <h2 class="title">Section Title</h2>
-            <section class="container">
-                <div class="item">Content Box 1</div>
-                <div class="item">Content Box 2</div>
-                <div class="item">Content Box 3</div>
-                <div class="item">Content Box 4</div>
-            </section>
+        <!-- 以下是 Section Title 區塊 -->
+        <h2 class="title">Section Title</h2>
+        
+        <section class="container">
+            <div class="item">Content Box 1</div>
+            <div class="item">Content Box 2</div>
+            <div class="item">Content Box 3</div>
+            <div class="item">Content Box 4</div>
+        </section>
 
+        <div class="cta-container">
+            <button class="cta-button">Call to Action</button>
+        </div>
 
-            <div class="cta-container">
-                <div class="cta-button">Call to Action</div>
-            </div>
+        <!-- 以下是點擊 CTA 按鈕後才會展示的隱藏區塊 -->
+        <section class="container-hide">
+            <div class="item">Content Box 5</div>
+            <div class="item">Content Box 6</div>
+            <div class="item">Content Box 7</div>
+            <div class="item">Content Box 8</div>
+        </section>
 
     </div>
+    <script src="w2.js"></script>
 </body>
 </html>
