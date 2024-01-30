@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <label for="numberInput">Hi! Enter a number:</label>
+    <input id="numberInput" type="text">
+    <button id="btn">Calculate</button>
+    <div id="result"></div>
+
+    <script>
+        const btnClick = document.getElementById('btn')
+        btnClick.addEventListener('click', () => caculate());
+
+        // 請求 api 
+        async function caculate() {
+            let userInput = document.getElementById('numberInput').value;
+            let wordOutcome = document.getElementById('result');
+
+            // try...catch 區塊，把網址變成另一組來跟輸入 bar 所產生的結果做區分
+            try {
+                const response = await fetch(`/getdatas?number=${userInput}`);
+                
+                if (!response.status==200) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+
+                const back = await response.json();
+                wordOutcome.innerText = `Return:${back.result}`;
+                
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+    </script>
+</body>
+</html>
